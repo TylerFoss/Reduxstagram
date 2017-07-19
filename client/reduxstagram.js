@@ -1,9 +1,14 @@
 import React from 'react';
 import App from "./components/App";
 import { render } from 'react-dom';
-
+import Raven from "raven-js";
+import {sentry_url} from "./data/config";
 // Import css
 import css from './styles/style.styl';
+
+Raven.config(sentry_url).install();
+
+
 
 // Import Components
 import Main from './components/App';
